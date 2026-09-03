@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Practice | B.Voc SD</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .quiz {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .question {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .question h3 {
+      margin-bottom: 12px;
+    }
+
+    .question label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    .submit-area {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .tip {
+      background: #eef2ff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      header {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">B.Voc SD</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="machine-learning.html">Machine Learning</a>
+      <a href="practice.html">Practice</a>
+    </nav>
+
+  </header>
+
+
+  <section class="hero">
+
+    <h1>🧠 Coding Practice</h1>
+
+    <p>
+      Practice programming, web development and Machine Learning.
+    </p>
+
+  </section>
+
+
+  <div class="container">
+
+    <div class="tip">
+      💡 <strong>Practice Tip:</strong>
+      Try solving questions yourself before checking the answer.
+    </div>
+
+
+    <h2 class="section-title">💻 Practice Categories</h2>
+
+
+    <div class="practice-grid">
+
+      <div class="card">
+        <h3>🐍 Python</h3>
+        <p>
+          Practice Python variables, loops, functions,
+          lists and basic programming problems.
+        </p>
+
+        <button class="btn" onclick="practice('Python')">
+          Start Practice
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>⚙️ C / C++</h3>
+        <p>
+          Practice conditions, loops, functions,
+          arrays and basic programming logic.
+        </p>
+
+        <button class="btn" onclick="practice('C / C++')">
+          Start Practice
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>☕ Java</h3>
+        <p>
+          Practice Java fundamentals, OOP concepts
+          and programming questions.
+        </p>
+
+        <button class="btn" onclick="practice('Java')">
+          Start Practice
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🌐 Web Development</h3>
+        <p>
+          Practice HTML, CSS and JavaScript
+          through beginner-friendly questions.
+        </p>
+
+        <button class="btn" onclick="practice('Web Development')">
+          Start Practice
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🧩 DSA</h3>
+        <p>
+          Practice arrays, strings, searching,
+          sorting and basic data structures.
+        </p>
+
+        <button class="btn" onclick="practice('DSA')">
+          Start Practice
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🤖 Machine Learning</h3>
+        <p>
+          Practice ML concepts including regression,
+          classification and clustering.
+        </p>
+
+        <button class="btn" onclick="practice('Machine Learning')">
+          Start Practice
+        </button>
+      </div>
+
+    </div>
+
+
+    <h2 class="section-title">📝 Quick Coding Quiz</h2>
+
+
+    <section class="quiz">
+
+      <div class="question">
+
+        <h3>1. Which language is commonly used for Machine Learning?</h3>
+
+        <label>
+          <input type="radio" name="q1" value="wrong">
+          HTML
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="correct">
+          Python
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="wrong">
+          CSS
+        </label>
+
+      </div>
+
+
+      <div class="question">
+
+        <h3>2. What does HTML stand for?</h3>
+
+        <label>
+          <input type="radio" name="q2" value="correct">
+          HyperText Markup Language
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="wrong">
+          HighText Machine Language
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="wrong">
+          Hyper Tool Multi Language
+        </label>
+
+      </div>
+
+
+      <div class="question">
+
+        <h3>3. Which data structure stores multiple values in Python?</h3>
+
+        <label>
+          <input type="radio" name="q3" value="wrong">
+          Number
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="correct">
+          List
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="wrong">
+          Character
+        </label>
+
+      </div>
+
+
+      <div class="question">
+
+        <h3>4. What is CSS mainly used for?</h3>
+
+        <label>
+          <input type="radio" name="q4" value="wrong">
+          Database management
+        </label>
+
+        <label>
+          <input type="radio" name="q4" value="correct">
+          Styling web pages
+        </label>
+
+        <label>
+          <input type="radio" name="q4" value="wrong">
+          Machine Learning
+        </label>
+
+      </div>
+
+
+      <div class="submit-area">
+
+        <button class="btn" onclick="checkQuiz()">
+          Submit Quiz
+        </button>
+
+        <div id="result"></div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <footer>
+
+    <p>© 2026 B.Voc SD Learning Platform</p>
+    <p>Learn • Practice • Build • Grow 🚀</p>
+
+  </footer>
+
+
+  <script>
+
+    function practice(topic) {
+
+      alert(
+        "🚀 " + topic +
+        " Practice Selected!\n\n" +
+        "More coding questions and challenges will be added soon."
+      );
+
+    }
+
+
+    function checkQuiz() {
+
+      let score = 0;
+
+      const questions = ["q1", "q2", "q3", "q4"];
+
+      questions.forEach(function(question) {
+
+        const answer =
+          document.querySelector(
+            'input[name="' + question + '"]:checked'
+          );
+
+        if (answer && answer.value === "correct") {
+          score++;
+        }
+
+      });
+
+
+      document.getElementById("result").innerText =
+        "🎉 Your Score: " + score + " / 4";
+
+    }
+
+  </script>
+
+</body>
+</html>
