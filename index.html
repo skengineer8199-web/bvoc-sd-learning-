@@ -250,6 +250,38 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Dark Mode */
+
+body.dark-mode {
+  background: #111827;
+  color: #f9fafb;
+}
+
+body.dark-mode .card,
+body.dark-mode .dashboard-card,
+body.dark-mode section {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark-mode p {
+  color: #d1d5db;
+}
+
+#themeBtn {
+  background: #374151;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+#themeBtn:hover {
+  background: #4b5563;
+}
     </style>
 </head>
 
@@ -614,7 +646,6 @@
 
 </footer>
 
-
 <script>
 
 function goCourses() {
@@ -645,6 +676,19 @@ function course(name) {
         " course selected!\n\n" +
         "Full lessons and quizzes will be added next."
     );
+
+}
+    function toggleDarkMode() {
+
+  document.body.classList.toggle("dark-mode");
+
+  const button = document.getElementById("themeBtn");
+
+  if (document.body.classList.contains("dark-mode")) {
+    button.innerText = "☀️";
+  } else {
+    button.innerText = "🌙";
+  }
 
 }
 
