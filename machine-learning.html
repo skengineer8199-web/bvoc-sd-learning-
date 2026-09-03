@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Machine Learning | B.Voc SD</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      margin-top: 5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin-bottom: 60px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: #2563eb;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 15px;
+      font-weight: bold;
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .projects {
+      margin-top: 60px;
+    }
+
+    .quiz {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-top: 60px;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    .question h3 {
+      margin-bottom: 12px;
+    }
+
+    .question label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      header {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">B.Voc SD</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="machine-learning.html">Machine Learning</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <h1>🤖 Machine Learning Lab</h1>
+    <p>
+      Learn Machine Learning step-by-step, from Python basics
+      to real-world ML projects.
+    </p>
+  </section>
+
+
+  <div class="container">
+
+    <h2 class="section-title">🚀 ML Roadmap</h2>
+
+    <div class="roadmap">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Python</h3>
+        <p>Learn Python fundamentals required for ML.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>NumPy</h3>
+        <p>Work with arrays and numerical calculations.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Pandas</h3>
+        <p>Learn data cleaning and data analysis.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>ML Algorithms</h3>
+        <p>Understand regression, classification and clustering.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <h3>Projects</h3>
+        <p>Build practical Machine Learning projects.</p>
+      </div>
+
+    </div>
+
+
+    <h2 class="section-title">📚 Machine Learning Topics</h2>
+
+    <div class="courses">
+
+      <div class="card">
+        <h3>🐍 Python for ML</h3>
+        <p>
+          Variables, loops, functions, lists, dictionaries
+          and Python basics for Machine Learning.
+        </p>
+        <button class="btn" onclick="startLesson('Python for ML')">
+          Start Learning
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🔢 NumPy</h3>
+        <p>
+          Learn arrays, mathematical operations and numerical
+          computing with NumPy.
+        </p>
+        <button class="btn" onclick="startLesson('NumPy')">
+          Start Learning
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🐼 Pandas</h3>
+        <p>
+          Learn DataFrame, data cleaning, filtering and
+          data analysis using Pandas.
+        </p>
+        <button class="btn" onclick="startLesson('Pandas')">
+          Start Learning
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>📊 Data Visualization</h3>
+        <p>
+          Understand how data can be represented using
+          charts and graphs.
+        </p>
+        <button class="btn" onclick="startLesson('Data Visualization')">
+          Start Learning
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>📈 Regression</h3>
+        <p>
+          Learn how Machine Learning models can predict
+          numerical values.
+        </p>
+        <button class="btn" onclick="startLesson('Regression')">
+          Start Learning
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🎯 Classification</h3>
+        <p>
+          Understand how ML models classify data into
+          different categories.
+        </p>
+        <button class="btn" onclick="startLesson('Classification')">
+          Start Learning
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🔵 Clustering</h3>
+        <p>
+          Learn how unsupervised learning can group
+          similar data points.
+        </p>
+        <button class="btn" onclick="startLesson('Clustering')">
+          Start Learning
+        </button>
+      </div>
+
+
+      <div class="card">
+        <h3>🧠 Neural Networks</h3>
+        <p>
+          Get introduced to neurons, layers, training
+          and basic neural networks.
+        </p>
+        <button class="btn" onclick="startLesson('Neural Networks')">
+          Start Learning
+        </button>
+      </div>
+
+    </div>
+
+
+    <section class="projects">
+
+      <h2 class="section-title">💡 ML Projects</h2>
+
+      <div class="courses">
+
+        <div class="card">
+          <h3>Student Score Prediction</h3>
+          <p>
+            Build a simple model that predicts a student's
+            score from study-related data.
+          </p>
+          <button class="btn" onclick="startProject('Student Score Prediction')">
+            View Project
+          </button>
+        </div>
+
+
+        <div class="card">
+          <h3>House Price Prediction</h3>
+          <p>
+            Learn the basic idea of predicting numerical
+            values using regression.
+          </p>
+          <button class="btn" onclick="startProject('House Price Prediction')">
+            View Project
+          </button>
+        </div>
+
+
+        <div class="card">
+          <h3>Simple Classification</h3>
+          <p>
+            Create a beginner-friendly classification
+            project using sample data.
+          </p>
+          <button class="btn" onclick="startProject('Simple Classification')">
+            View Project
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="quiz">
+
+      <h2 class="section-title">📝 Quick ML Quiz</h2>
+
+      <div class="question">
+        <h3>1. What does ML stand for?</h3>
+
+        <label>
+          <input type="radio" name="q1" value="wrong">
+          Machine Language
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="correct">
+          Machine Learning
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="wrong">
+          Modern Logic
+        </label>
+      </div>
+
+
+      <div class="question">
+        <h3>2. Which library is commonly used for data analysis in Python?</h3>
+
+        <label>
+          <input type="radio" name="q2" value="wrong">
+          HTML
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="correct">
+          Pandas
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="wrong">
+          CSS
+        </label>
+      </div>
+
+
+      <div class="question">
+        <h3>3. Which is an example of supervised learning?</h3>
+
+        <label>
+          <input type="radio" name="q3" value="wrong">
+          Clustering without labels
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="correct">
+          Classification using labelled data
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="wrong">
+          Random guessing
+        </label>
+      </div>
+
+
+      <button class="btn" onclick="checkQuiz()">
+        Submit Quiz
+      </button>
+
+      <div id="result"></div>
+
+    </section>
+
+  </div>
+
+
+  <footer>
+    <p>© 2026 B.Voc SD Learning Platform</p>
+    <p>Learn • Practice • Build • Grow 🚀</p>
+  </footer>
+
+
+  <script>
+
+    function startLesson(topic) {
+      alert(
+        "🚀 " + topic +
+        " lesson selected!\n\n" +
+        "Full lessons, videos, notes and progress tracking will be added soon."
+      );
+    }
+
+
+    function startProject(project) {
+      alert(
+        "💡 Project: " + project +
+        "\n\nProject instructions and source code will be added soon."
+      );
+    }
+
+
+    function checkQuiz() {
+
+      let score = 0;
+
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      const q3 = document.querySelector('input[name="q3"]:checked');
+
+      if (q1 && q1.value === "correct") {
+        score++;
+      }
+
+      if (q2 && q2.value === "correct") {
+        score++;
+      }
+
+      if (q3 && q3.value === "correct") {
+        score++;
+      }
+
+      document.getElementById("result").innerText =
+        "🎉 Your Score: " + score + " / 3";
+    }
+
+  </script>
+
+</body>
+</html>
