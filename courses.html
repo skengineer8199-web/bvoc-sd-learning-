@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>B.Voc SD | Courses</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7ff;
+    color:#172033;
+}
+
+header{
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#5b5cf0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#5b5cf0;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#5b5cf0;
+}
+
+.hero p{
+    color:#667085;
+    font-size:18px;
+}
+
+.search{
+    display:block;
+    margin:30px auto;
+    width:90%;
+    max-width:500px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.category{
+    margin:50px 0 25px;
+}
+
+.category h2{
+    font-size:30px;
+}
+
+.category p{
+    color:#667085;
+    margin-top:8px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:
+    repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:45px;
+}
+
+.card h3{
+    margin:15px 0 10px;
+    font-size:23px;
+}
+
+.card p{
+    color:#667085;
+    line-height:1.6;
+}
+
+.level{
+    display:inline-block;
+    background:#ecebff;
+    color:#5046e5;
+    padding:7px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:13px;
+    border:0;
+    border-radius:10px;
+    background:#5b5cf0;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#4849d5;
+}
+
+.ml-section{
+    background:linear-gradient(
+        135deg,
+        #eef2ff,
+        #f5f3ff
+    );
+
+    padding:35px;
+    border-radius:25px;
+}
+
+footer{
+    margin-top:70px;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer p{
+    color:#aab4c8;
+    margin-top:8px;
+}
+
+@media(max-width:850px){
+
+    .cards{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:550px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:5px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+B.Voc SD
+</div>
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="courses.html">
+Courses
+</a>
+
+<a href="index.html#ml">
+Machine Learning
+</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>
+B.Voc SD <span>Courses</span>
+</h1>
+
+<p>
+Learn programming and software development
+from basics to advanced level.
+</p>
+
+<input
+type="text"
+id="search"
+class="search"
+placeholder="🔎 Search a course..."
+>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- PROGRAMMING -->
+
+<div class="category">
+
+<h2>
+💻 Programming
+</h2>
+
+<p>
+Build a strong programming foundation.
+</p>
+
+</div>
+
+
+<div class="cards" id="courseList">
+
+
+<div class="card course">
+
+<div class="icon">
+🐍
+</div>
+
+<h3>
+Python
+</h3>
+
+<p>
+Learn Python programming,
+functions, OOP, files and projects.
+</p>
+
+<span class="level">
+BEGINNER → ADVANCED
+</span>
+
+<button onclick="startCourse('Python')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+⚙️
+</div>
+
+<h3>
+C / C++
+</h3>
+
+<p>
+Learn programming logic,
+pointers, OOP and algorithms.
+</p>
+
+<span class="level">
+CORE PROGRAMMING
+</span>
+
+<button onclick="startCourse('C / C++')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+☕
+</div>
+
+<h3>
+Java
+</h3>
+
+<p>
+Learn Java, OOP, collections
+and application development.
+</p>
+
+<span class="level">
+INTERMEDIATE
+</span>
+
+<button onclick="startCourse('Java')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+🌐
+</div>
+
+<h3>
+JavaScript
+</h3>
+
+<p>
+Learn JavaScript and create
+interactive web applications.
+</p>
+
+<span class="level">
+WEB DEVELOPMENT
+</span>
+
+<button onclick="startCourse('JavaScript')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+🧩
+</div>
+
+<h3>
+Data Structures & Algorithms
+</h3>
+
+<p>
+Arrays, linked lists, stacks,
+queues, trees and graphs.
+</p>
+
+<span class="level">
+PROBLEM SOLVING
+</span>
+
+<button onclick="startCourse('DSA')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+🗄️
+</div>
+
+<h3>
+SQL & Database
+</h3>
+
+<p>
+Learn SQL queries, tables,
+joins and database design.
+</p>
+
+<span class="level">
+DATABASE
+</span>
+
+<button onclick="startCourse('SQL')">
+Start Learning
+</button>
+
+</div>
+
+
+</div>
+
+
+<!-- MACHINE LEARNING -->
+
+<div class="category">
+
+<h2>
+🤖 Machine Learning
+</h2>
+
+<p>
+Start your Artificial Intelligence journey.
+</p>
+
+</div>
+
+
+<div class="ml-section">
+
+<div class="cards">
+
+
+<div class="card course">
+
+<div class="icon">
+📊
+</div>
+
+<h3>
+Python for ML
+</h3>
+
+<p>
+Learn NumPy, Pandas and
+data processing for Machine Learning.
+</p>
+
+<span class="level">
+ML FOUNDATION
+</span>
+
+<button onclick="startCourse('Python for ML')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+📈
+</div>
+
+<h3>
+Supervised Learning
+</h3>
+
+<p>
+Regression, classification,
+training and model evaluation.
+</p>
+
+<span class="level">
+MACHINE LEARNING
+</span>
+
+<button onclick="startCourse('Supervised Learning')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+🔍
+</div>
+
+<h3>
+Unsupervised Learning
+</h3>
+
+<p>
+Clustering and pattern
+discovery algorithms.
+</p>
+
+<span class="level">
+MACHINE LEARNING
+</span>
+
+<button onclick="startCourse('Unsupervised Learning')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+🧠
+</div>
+
+<h3>
+Neural Networks
+</h3>
+
+<p>
+Learn the basics of neural
+networks and deep learning.
+</p>
+
+<span class="level">
+DEEP LEARNING
+</span>
+
+<button onclick="startCourse('Neural Networks')">
+Start Learning
+</button>
+
+</div>
+
+
+<div class="card course">
+
+<div class="icon">
+🚀
+</div>
+
+<h3>
+Machine Learning Projects
+</h3>
+
+<p>
+Build practical ML projects
+using real-world datasets.
+</p>
+
+<span class="level">
+PROJECTS
+</span>
+
+<button onclick="startCourse('ML Projects')">
+Start Learning
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<h2>
+B.Voc SD
+</h2>
+
+<p>
+Programming & Machine Learning Learning Platform
+</p>
+
+<p>
+© 2026 B.Voc SD
+</p>
+
+</footer>
+
+
+<script>
+
+
+function startCourse(course){
+
+alert(
+"📚 " +
+course +
+" selected!\n\n" +
+"Full lessons, videos, quizzes and " +
+"progress tracking will be added next."
+);
+
+}
+
+
+/* COURSE SEARCH */
+
+document
+.getElementById("search")
+.addEventListener(
+"input",
+function(){
+
+let searchText =
+this.value.toLowerCase();
+
+document
+.querySelectorAll(".course")
+.forEach(
+function(card){
+
+let text =
+card.innerText.toLowerCase();
+
+if(
+text.includes(searchText)
+){
+
+card.style.display =
+"block";
+
+}else{
+
+card.style.display =
+"none";
+
+}
+
+});
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
