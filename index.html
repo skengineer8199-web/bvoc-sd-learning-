@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>B.Voc SD | Learning Platform</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        header {
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #5b5cf0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #5b5cf0;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 70px 8%;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9e8ff;
+            color: #4f46e5;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin: 20px 0;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: #5b5cf0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #667085;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 14px 22px;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .primary {
+            background: #5b5cf0;
+            color: white;
+        }
+
+        .secondary {
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .dashboard {
+            background: linear-gradient(135deg, #171b3a, #5546d8);
+            color: white;
+            padding: 30px;
+            border-radius: 25px;
+            width: 350px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .dashboard h2 {
+            margin-bottom: 15px;
+        }
+
+        .progress {
+            height: 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress div {
+            height: 100%;
+            width: 68%;
+            background: white;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            background: rgba(255,255,255,0.12);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 22px;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #667085;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            border: 1px solid #eee;
+        }
+
+        .card .icon {
+            font-size: 40px;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        .card button {
+            margin-top: 20px;
+        }
+
+        .ml {
+            background: linear-gradient(135deg,#eef2ff,#f5f3ff);
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        footer p {
+            margin-top: 8px;
+            color: #aab4c8;
+        }
+
+        @media(max-width:800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .dashboard {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        B.Voc SD
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#ml">Machine Learning</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <span class="badge">
+            🎓 B.Voc Software Development
+        </span>
+
+        <h1>
+            Learn <span>Programming</span>
+            & Machine Learning
+        </h1>
+
+        <p>
+            Welcome to B.Voc SD Learning Platform.
+            Learn programming, software development,
+            coding, Machine Learning and practical
+            projects in one place.
+        </p>
+
+        <div class="buttons">
+
+            <button
+                class="btn primary"
+                onclick="goCourses()">
+                Explore Courses →
+            </button>
+
+            <button
+                class="btn secondary"
+                onclick="welcome()">
+                Get Started
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard">
+
+        <h2>📊 Student Dashboard</h2>
+
+        <p>Your Learning Progress</p>
+
+        <div class="progress">
+            <div></div>
+        </div>
+
+        <h2>68% Complete</h2>
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>12</strong>
+                Courses
+            </div>
+
+            <div class="stat">
+                <strong>47</strong>
+                Lessons
+            </div>
+
+            <div class="stat">
+                <strong>8</strong>
+                Projects
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section id="courses">
+
+    <div class="title">
+
+        <h2>💻 Programming Courses</h2>
+
+        <p>
+            Build your programming foundation.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🐍</div>
+
+            <h3>Python</h3>
+
+            <p>
+                Learn Python from basics to
+                advanced programming.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('Python')">
+                Start Course
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">⚙️</div>
+
+            <h3>C / C++</h3>
+
+            <p>
+                Learn programming logic,
+                pointers and algorithms.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('C / C++')">
+                Start Course
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">☕</div>
+
+            <h3>Java</h3>
+
+            <p>
+                Learn object oriented programming
+                and Java development.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('Java')">
+                Start Course
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🌐</div>
+
+            <h3>Web Development</h3>
+
+            <p>
+                HTML, CSS and JavaScript
+                website development.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('Web Development')">
+                Start Course
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🗄️</div>
+
+            <h3>SQL & Database</h3>
+
+            <p>
+                Learn SQL queries and
+                database management.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('SQL & Database')">
+                Start Course
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🧩</div>
+
+            <h3>DSA</h3>
+
+            <p>
+                Learn data structures,
+                algorithms and problem solving.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('DSA')">
+                Start Course
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MACHINE LEARNING -->
+
+<section id="ml" class="ml">
+
+    <div class="title">
+
+        <h2>🤖 Machine Learning</h2>
+
+        <p>
+            Start your journey into Artificial
+            Intelligence and Machine Learning.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">📈</div>
+
+            <h3>Supervised Learning</h3>
+
+            <p>
+                Regression, classification
+                and model evaluation.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('Supervised Learning')">
+                Learn
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🔍</div>
+
+            <h3>Unsupervised Learning</h3>
+
+            <p>
+                Clustering and
+                pattern discovery.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('Unsupervised Learning')">
+                Learn
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🧠</div>
+
+            <h3>Neural Networks</h3>
+
+            <p>
+                Learn the basics of
+                neural networks and deep learning.
+            </p>
+
+            <button
+                class="btn primary"
+                onclick="course('Neural Networks')">
+                Learn
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="title">
+
+        <h2>🚀 Start Learning Today</h2>
+
+        <p>
+            B.Voc SD — Programming &
+            Machine Learning Learning Platform.
+        </p>
+
+        <br>
+
+        <button
+            class="btn primary"
+            onclick="welcome()">
+            Start Learning
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h2>B.Voc SD</h2>
+
+    <p>
+        Programming & Machine Learning Hub
+    </p>
+
+    <p>
+        © 2026 B.Voc SD. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+function goCourses() {
+
+    document
+    .getElementById("courses")
+    .scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+function welcome() {
+
+    alert(
+        "Welcome to B.Voc SD! 🚀\n\n" +
+        "Your Programming & Machine Learning journey starts here."
+    );
+
+}
+
+
+function course(name) {
+
+    alert(
+        "📚 " + name +
+        " course selected!\n\n" +
+        "Full lessons and quizzes will be added next."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
