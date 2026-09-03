@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python Course | B.Voc SD</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .lesson {
+      background: white;
+      padding: 28px;
+      margin-bottom: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .lesson h2 {
+      color: #2563eb;
+      margin-bottom: 12px;
+    }
+
+    .lesson p {
+      margin-bottom: 15px;
+    }
+
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 18px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 11px 18px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .quiz {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .question {
+      margin-bottom: 25px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .question label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      B.Voc SD
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="machine-learning.html">Machine Learning</a>
+      <a href="practice.html">Practice</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+  </header>
+
+
+  <section class="hero">
+
+    <h1>🐍 Python Course</h1>
+
+    <p>
+      Learn Python from beginner to intermediate level.
+    </p>
+
+  </section>
+
+
+  <div class="container">
+
+
+    <div class="lesson">
+
+      <h2>📘 Lesson 1: Introduction to Python</h2>
+
+      <p>
+        Python is a popular programming language known for
+        its simple syntax and wide range of applications.
+      </p>
+
+      <p>
+        It is commonly used in web development, automation,
+        data analysis and Machine Learning.
+      </p>
+
+      <pre><code>print("Hello, World!")</code></pre>
+
+      <button class="btn" onclick="completeLesson(1)">
+        ✅ Complete Lesson
+      </button>
+
+    </div>
+
+
+    <div class="lesson">
+
+      <h2>📦 Lesson 2: Variables</h2>
+
+      <p>
+        Variables are used to store values in a program.
+      </p>
+
+      <pre><code>name = "Student"
+age = 18
+
+print(name)
+print(age)</code></pre>
+
+      <button class="btn" onclick="completeLesson(2)">
+        ✅ Complete Lesson
+      </button>
+
+    </div>
+
+
+    <div class="lesson">
+
+      <h2>🔢 Lesson 3: Data Types</h2>
+
+      <p>
+        Some common Python data types are:
+      </p>
+
+      <ul>
+        <li>String</li>
+        <li>Integer</li>
+        <li>Float</li>
+        <li>Boolean</li>
+        <li>List</li>
+      </ul>
+
+      <pre><code>name = "Rahul"
+age = 20
+marks = 85.5
+passed = True</code></pre>
+
+      <button class="btn" onclick="completeLesson(3)">
+        ✅ Complete Lesson
+      </button>
+
+    </div>
+
+
+    <div class="lesson">
+
+      <h2>🔄 Lesson 4: Loops</h2>
+
+      <p>
+        Loops allow us to repeat a block of code.
+      </p>
+
+      <pre><code>for i in range(5):
+    print(i)</code></pre>
+
+      <button class="btn" onclick="completeLesson(4)">
+        ✅ Complete Lesson
+      </button>
+
+    </div>
+
+
+    <div class="lesson">
+
+      <h2>🔧 Lesson 5: Functions</h2>
+
+      <p>
+        Functions are reusable blocks of code that perform
+        a particular task.
+      </p>
+
+      <pre><code>def greet():
+    print("Hello!")
+
+greet()</code></pre>
+
+      <button class="btn" onclick="completeLesson(5)">
+        ✅ Complete Lesson
+      </button>
+
+    </div>
+
+
+    <section class="quiz">
+
+      <h2>📝 Python Mini Quiz</h2>
+
+      <br>
+
+
+      <div class="question">
+
+        <h3>1. Which function prints output in Python?</h3>
+
+        <label>
+          <input type="radio" name="q1" value="wrong">
+          display()
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="correct">
+          print()
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="wrong">
+          output()
+        </label>
+
+      </div>
+
+
+      <div class="question">
+
+        <h3>2. Which symbol is used to assign a value?</h3>
+
+        <label>
+          <input type="radio" name="q2" value="wrong">
+          ==
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="correct">
+          =
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="wrong">
+          !=
+        </label>
+
+      </div>
+
+
+      <div class="question">
+
+        <h3>3. Which keyword is used to create a function?</h3>
+
+        <label>
+          <input type="radio" name="q3" value="wrong">
+          function
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="correct">
+          def
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="wrong">
+          create
+        </label>
+
+      </div>
+
+
+      <button class="btn" onclick="checkQuiz()">
+        Submit Quiz
+      </button>
+
+      <div id="result"></div>
+
+    </section>
+
+  </div>
+
+
+  <footer>
+
+    <p>© 2026 B.Voc SD Learning Platform</p>
+
+    <p>
+      Learn • Practice • Build • Grow 🚀
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    function completeLesson(number) {
+
+      alert(
+        "🎉 Lesson " +
+        number +
+        " completed!"
+      );
+
+    }
+
+
+    function checkQuiz() {
+
+      let score = 0;
+
+      const questions = ["q1", "q2", "q3"];
+
+      questions.forEach(function(question) {
+
+        const answer =
+          document.querySelector(
+            'input[name="' + question + '"]:checked'
+          );
+
+        if (answer && answer.value === "correct") {
+          score++;
+        }
+
+      });
+
+      document.getElementById("result").innerText =
+        "🎉 Your Score: " + score + " / 3";
+
+    }
+
+  </script>
+
+</body>
+
+</html>
