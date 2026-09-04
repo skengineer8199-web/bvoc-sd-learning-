@@ -1274,6 +1274,666 @@ Complete Lesson
 <span class="lesson-number">
 LESSON 30
 </span>
+    <!-- LESSON 31 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 31</span>
+
+<h2>*args and **kwargs</h2>
+
+<p>
+Learn how Python functions can accept a flexible number
+of arguments.
+</p>
+
+<pre>
+def add(*numbers):
+    print(numbers)
+
+add(10, 20, 30)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn31"
+onclick="completeLesson(31)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 32 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 32</span>
+
+<h2>Default & Keyword Arguments</h2>
+
+<p>
+Learn how to use default values and named arguments
+inside functions.
+</p>
+
+<pre>
+def greet(name="Student"):
+    print("Hello", name)
+
+greet()
+greet("Alex")
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn32"
+onclick="completeLesson(32)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 33 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 33</span>
+
+<h2>Recursion</h2>
+
+<p>
+Recursion happens when a function calls itself to solve
+a smaller version of a problem.
+</p>
+
+<pre>
+def countdown(n):
+
+    if n == 0:
+        return
+
+    print(n)
+
+    countdown(n - 1)
+
+countdown(5)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn33"
+onclick="completeLesson(33)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 34 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 34</span>
+
+<h2>map(), filter() & reduce()</h2>
+
+<p>
+These functions are useful for processing collections
+of data.
+</p>
+
+<pre>
+numbers = [1, 2, 3, 4]
+
+squares = list(
+    map(lambda x: x * x, numbers)
+)
+
+print(squares)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn34"
+onclick="completeLesson(34)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 35 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 35</span>
+
+<h2>Iterators</h2>
+
+<p>
+Learn how Python objects can be traversed one item
+at a time.
+</p>
+
+<pre>
+numbers = [10, 20, 30]
+
+iterator = iter(numbers)
+
+print(next(iterator))
+print(next(iterator))
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn35"
+onclick="completeLesson(35)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 36 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 36</span>
+
+<h2>Generators</h2>
+
+<p>
+Generators produce values one at a time using the
+yield keyword.
+</p>
+
+<pre>
+def numbers():
+
+    yield 1
+    yield 2
+    yield 3
+
+for n in numbers():
+    print(n)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn36"
+onclick="completeLesson(36)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 37 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 37</span>
+
+<h2>Decorators</h2>
+
+<p>
+Decorators allow us to modify or extend the behavior
+of functions.
+</p>
+
+<pre>
+def welcome(func):
+
+    def wrapper():
+        print("Welcome")
+        func()
+
+    return wrapper
+
+
+@welcome
+def hello():
+    print("Hello Student")
+
+hello()
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn37"
+onclick="completeLesson(37)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 38 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 38</span>
+
+<h2>Regular Expressions</h2>
+
+<p>
+Regular expressions are useful for finding patterns
+inside text.
+</p>
+
+<pre>
+import re
+
+text = "Python 123"
+
+result = re.findall(
+    r"\d+",
+    text
+)
+
+print(result)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn38"
+onclick="completeLesson(38)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 39 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 39</span>
+
+<h2>Date & Time</h2>
+
+<p>
+Learn how to work with dates and times in Python.
+</p>
+
+<pre>
+from datetime import datetime
+
+now = datetime.now()
+
+print(now)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn39"
+onclick="completeLesson(39)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 40 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 40</span>
+
+<h2>JSON</h2>
+
+<p>
+JSON is commonly used for storing and exchanging
+structured data.
+</p>
+
+<pre>
+import json
+
+student = {
+    "name": "Alex",
+    "age": 20
+}
+
+data = json.dumps(student)
+
+print(data)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn40"
+onclick="completeLesson(40)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 41 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 41</span>
+
+<h2>CSV Files</h2>
+
+<p>
+Learn the basics of reading and writing CSV data.
+</p>
+
+<pre>
+import csv
+
+with open("students.csv", "r") as file:
+
+    reader = csv.reader(file)
+
+    for row in reader:
+        print(row)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn41"
+onclick="completeLesson(41)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 42 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 42</span>
+
+<h2>OS Module</h2>
+
+<p>
+The os module provides tools for working with files,
+folders and the operating system.
+</p>
+
+<pre>
+import os
+
+print(os.getcwd())
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn42"
+onclick="completeLesson(42)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 43 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 43</span>
+
+<h2>Random Module</h2>
+
+<p>
+The random module can generate random values.
+</p>
+
+<pre>
+import random
+
+number = random.randint(1, 10)
+
+print(number)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn43"
+onclick="completeLesson(43)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 44 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 44</span>
+
+<h2>Math Module</h2>
+
+<p>
+The math module provides mathematical functions.
+</p>
+
+<pre>
+import math
+
+print(math.sqrt(25))
+print(math.pi)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn44"
+onclick="completeLesson(44)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 45 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 45</span>
+
+<h2>Debugging</h2>
+
+<p>
+Debugging means finding and fixing errors in a program.
+</p>
+
+<pre>
+try:
+    result = 10 / 0
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn45"
+onclick="completeLesson(45)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 46 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 46</span>
+
+<h2>Testing Basics</h2>
+
+<p>
+Testing helps us check whether our Python code works
+as expected.
+</p>
+
+<pre>
+def add(a, b):
+    return a + b
+
+
+assert add(2, 3) == 5
+
+print("Test passed")
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn46"
+onclick="completeLesson(46)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 47 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 47</span>
+
+<h2>APIs with Python</h2>
+
+<p>
+Learn the basic idea of APIs and how Python programs
+can communicate with web services.
+</p>
+
+<pre>
+# Example concept
+
+API
+  ↓
+Request
+  ↓
+Server
+  ↓
+Response
+  ↓
+Python Program
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn47"
+onclick="completeLesson(47)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 48 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 48</span>
+
+<h2>SQLite Database</h2>
+
+<p>
+Learn how Python can work with a local SQLite database.
+</p>
+
+<pre>
+import sqlite3
+
+connection = sqlite3.connect(
+    "students.db"
+)
+
+print("Database connected")
+
+connection.close()
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn48"
+onclick="completeLesson(48)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 49 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 49</span>
+
+<h2>Python Project Structure</h2>
+
+<p>
+Learn how to organize a Python project into files,
+folders and modules.
+</p>
+
+<pre>
+my_project/
+
+    main.py
+
+    functions.py
+
+    data/
+
+    tests/
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn49"
+onclick="completeLesson(49)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 50 -->
+
+<div class="lesson">
+
+<span class="lesson-number">LESSON 50</span>
+
+<h2>🚀 Final Python Project</h2>
+
+<p>
+Build a Student Management System using Python.
+Use variables, lists, dictionaries, functions and
+conditions together.
+</p>
+
+<pre>
+students = []
+
+def add_student(name, marks):
+
+    student = {
+        "name": name,
+        "marks": marks
+    }
+
+    students.append(student)
+
+
+add_student("Alex", 85)
+
+print(students)
+</pre>
+
+<ul>
+
+<li>Add students</li>
+
+<li>Store marks</li>
+
+<li>Display student data</li>
+
+<li>Calculate results</li>
+
+</ul>
+
+<button class="complete-btn"
+id="lessonBtn50"
+onclick="completeLesson(50)">
+Complete Lesson
+</button>
+
+</div>
 
 <h2>🚀 Python Mini Project</h2>
 
@@ -1298,7 +1958,7 @@ print(result)
 
 <button class="complete-btn"
 id="lessonBtn30"
-onclick="completeLesson(30)">
+onclick="completeLesson(50)">
 Complete Lesson
 </button>
 
