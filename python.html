@@ -2,606 +2,1610 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Python Course - B.Voc SD</title>
+<meta charset="UTF-8">
 
-  <style>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<title>Python Course | B.Voc SD</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7ff;
+    color:#172033;
+}
+
+header{
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#5b5cf0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#5b5cf0;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px 50px;
+    background:linear-gradient(135deg,#eef2ff,#f5f3ff);
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#5b5cf0;
+}
+
+.hero p{
+    color:#667085;
+    font-size:18px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* PROGRESS */
+
+.progress-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    font-weight:bold;
+}
+
+.progress-bar{
+    width:100%;
+    height:18px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    width:0%;
+    background:#22c55e;
+    transition:.4s;
+}
+
+/* LESSON */
+
+.lesson{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    margin-bottom:22px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.lesson-number{
+    color:#5b5cf0;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.lesson h2{
+    margin:8px 0 12px;
+}
+
+.lesson p{
+    color:#667085;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.lesson ul{
+    margin:15px 0 15px 20px;
+    color:#667085;
+    line-height:1.8;
+}
+
+pre{
+    background:#111827;
+    color:#f9fafb;
+    padding:18px;
+    border-radius:10px;
+    overflow-x:auto;
+    margin:15px 0;
+}
+
+.complete-btn{
+    background:#5b5cf0;
+    color:white;
+    border:0;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.complete-btn:hover{
+    background:#4849d5;
+}
+
+.complete-btn.completed{
+    background:#16a34a;
+}
+
+/* QUIZ */
+
+.quiz{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    margin-top:35px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.quiz h2{
+    margin-bottom:20px;
+}
+
+.question{
+    margin-bottom:25px;
+}
+
+.question p{
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.question label{
+    display:block;
+    margin:9px 0;
+    color:#667085;
+}
+
+.quiz button{
+    background:#5b5cf0;
+    color:white;
+    border:0;
+    padding:13px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#result{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.reset{
+    margin-top:15px;
+    background:#dc2626 !important;
+}
+
+footer{
+    margin-top:70px;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer p{
+    color:#aab4c8;
+    margin-top:8px;
+}
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f4f6;
-      color: #111827;
+    nav a{
+        margin:5px;
+        display:inline-block;
     }
 
-    header {
-      background: #111827;
-      color: white;
-      padding: 20px;
-      text-align: center;
+    .hero h1{
+        font-size:34px;
     }
 
-    header h1 {
-      margin-bottom: 15px;
-    }
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 8px;
-      font-size: 14px;
-    }
+</style>
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background: #2563eb;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    /* Progress */
-
-    .progress-card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .progress-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .progress-bar {
-      width: 100%;
-      height: 18px;
-      background: #e5e7eb;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 0%;
-      background: #22c55e;
-      transition: width 0.4s ease;
-    }
-
-    /* Lessons */
-
-    .lesson {
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .lesson h3 {
-      margin-bottom: 12px;
-      color: #2563eb;
-    }
-
-    .lesson p {
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    pre {
-      background: #111827;
-      color: #f9fafb;
-      padding: 18px;
-      border-radius: 8px;
-      overflow-x: auto;
-      margin-bottom: 15px;
-    }
-
-    button {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #1d4ed8;
-    }
-
-    button.completed {
-      background: #16a34a;
-    }
-
-    /* Quiz */
-
-    .quiz {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .quiz h2 {
-      margin-bottom: 20px;
-    }
-
-    .question {
-      margin-bottom: 20px;
-    }
-
-    .question label {
-      display: block;
-      margin: 8px 0;
-    }
-
-    #result {
-      margin-top: 20px;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .reset-btn {
-      margin-top: 15px;
-      background: #dc2626;
-    }
-
-    .reset-btn:hover {
-      background: #b91c1c;
-    }
-
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-    }
-
-    /* Mobile */
-
-    @media (max-width: 600px) {
-
-      .hero h2 {
-        font-size: 28px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
-
-    }
-
-  </style>
 </head>
+
 
 <body>
 
-  <header>
 
-    <h1>🎓 B.Voc Software Development</h1>
+<header>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="machine-learning.html">Machine Learning</a>
-      <a href="practice.html">Practice</a>
-      <a href="dashboard.html">Dashboard</a>
-    </nav>
+<div class="logo">
+B.Voc SD
+</div>
 
-  </header>
+<nav>
 
+<a href="index.html">Home</a>
 
-  <section class="hero">
+<a href="courses.html">Courses</a>
 
-    <h2>🐍 Python Course</h2>
+<a href="machine-learning.html">
+Machine Learning
+</a>
 
-    <p>Learn Python from Beginner to Advanced</p>
+<a href="practice.html">Practice</a>
 
-  </section>
+<a href="dashboard.html">Dashboard</a>
 
+</nav>
 
-  <div class="container">
-
-    <!-- Progress -->
-
-    <div class="progress-card">
-
-      <div class="progress-info">
-
-        <span>Course Progress</span>
-
-        <span id="progressText">0%</span>
-
-      </div>
-
-      <div class="progress-bar">
-
-        <div class="progress-fill" id="progressFill"></div>
-
-      </div>
-
-    </div>
+</header>
 
 
-    <!-- Lesson 1 -->
+<section class="hero">
 
-    <div class="lesson">
+<h1>
+🐍 <span>Python</span> Course
+</h1>
 
-      <h3>Lesson 1: Introduction to Python</h3>
+<p>
+Complete Python Programming Course
+</p>
 
-      <p>
-        Python is a popular programming language used in
-        web development, automation, data science and machine learning.
-      </p>
+</section>
 
-      <pre>
+
+<div class="container">
+
+
+<!-- PROGRESS -->
+
+<div class="progress-card">
+
+<div class="progress-top">
+
+<span>
+Python Course Progress
+</span>
+
+<span id="progressText">
+0%
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="progressFill">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- LESSON 1 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 01
+</span>
+
+<h2>Introduction to Python</h2>
+
+<p>
+Python is a high-level programming language known
+for its simple syntax and wide range of applications.
+</p>
+
+<ul>
+<li>What is Python?</li>
+<li>Features of Python</li>
+<li>Applications of Python</li>
+</ul>
+
+<pre>
 print("Hello, World!")
-      </pre>
+</pre>
 
-      <button id="lessonBtn1" onclick="completeLesson(1)">
-        Complete Lesson
-      </button>
+<button class="complete-btn"
+id="lessonBtn1"
+onclick="completeLesson(1)">
+Complete Lesson
+</button>
 
-    </div>
+</div>
 
 
-    <!-- Lesson 2 -->
+<!-- LESSON 2 -->
 
-    <div class="lesson">
+<div class="lesson">
 
-      <h3>Lesson 2: Variables</h3>
+<span class="lesson-number">
+LESSON 02
+</span>
 
-      <p>
-        Variables are used to store data in Python.
-      </p>
+<h2>Python Installation & Setup</h2>
 
-      <pre>
+<p>
+Learn how Python is installed and how to run your
+first Python program.
+</p>
+
+<ul>
+<li>Python installation</li>
+<li>Python interpreter</li>
+<li>Running Python programs</li>
+</ul>
+
+<pre>
+print("Python is working!")
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn2"
+onclick="completeLesson(2)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 3 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 03
+</span>
+
+<h2>print() Function</h2>
+
+<p>
+The print function is used to display information
+on the screen.
+</p>
+
+<pre>
+print("Hello")
+print(100)
+print("B.Voc SD")
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn3"
+onclick="completeLesson(3)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 4 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 04
+</span>
+
+<h2>Variables</h2>
+
+<p>
+Variables store data values in Python.
+</p>
+
+<pre>
 name = "Student"
 age = 18
 
 print(name)
 print(age)
-      </pre>
+</pre>
 
-      <button id="lessonBtn2" onclick="completeLesson(2)">
-        Complete Lesson
-      </button>
+<button class="complete-btn"
+id="lessonBtn4"
+onclick="completeLesson(4)">
+Complete Lesson
+</button>
 
-    </div>
+</div>
 
 
-    <!-- Lesson 3 -->
+<!-- LESSON 5 -->
 
-    <div class="lesson">
+<div class="lesson">
 
-      <h3>Lesson 3: Data Types</h3>
+<span class="lesson-number">
+LESSON 05
+</span>
 
-      <p>
-        Python has different data types such as String,
-        Integer, Float and Boolean.
-      </p>
+<h2>Data Types</h2>
 
-      <pre>
-name = "Rahul"
+<p>
+Learn common Python data types.
+</p>
+
+<ul>
+<li>String</li>
+<li>Integer</li>
+<li>Float</li>
+<li>Boolean</li>
+</ul>
+
+<pre>
+name = "Python"
 age = 20
-height = 5.8
+price = 99.5
 student = True
-      </pre>
+</pre>
 
-      <button id="lessonBtn3" onclick="completeLesson(3)">
-        Complete Lesson
-      </button>
+<button class="complete-btn"
+id="lessonBtn5"
+onclick="completeLesson(5)">
+Complete Lesson
+</button>
 
-    </div>
+</div>
 
 
-    <!-- Lesson 4 -->
+<!-- LESSON 6 -->
 
-    <div class="lesson">
+<div class="lesson">
 
-      <h3>Lesson 4: Loops</h3>
+<span class="lesson-number">
+LESSON 06
+</span>
 
-      <p>
-        Loops are used to repeat a block of code.
-      </p>
+<h2>Input & Output</h2>
 
-      <pre>
+<p>
+Learn how to take input from the user.
+</p>
+
+<pre>
+name = input("Enter your name: ")
+
+print("Hello", name)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn6"
+onclick="completeLesson(6)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 7 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 07
+</span>
+
+<h2>Operators</h2>
+
+<p>
+Operators are used to perform calculations and
+comparisons.
+</p>
+
+<pre>
+a = 10
+b = 5
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn7"
+onclick="completeLesson(7)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 8 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 08
+</span>
+
+<h2>Strings</h2>
+
+<p>
+Strings are sequences of characters.
+Learn string operations and methods.
+</p>
+
+<pre>
+name = "Python"
+
+print(name.upper())
+print(name.lower())
+print(len(name))
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn8"
+onclick="completeLesson(8)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 9 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 09
+</span>
+
+<h2>Lists</h2>
+
+<p>
+Lists store multiple values in one variable.
+</p>
+
+<pre>
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits)
+print(fruits[0])
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn9"
+onclick="completeLesson(9)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 10 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 10
+</span>
+
+<h2>Tuples</h2>
+
+<p>
+Tuples are ordered collections that cannot normally
+be changed after creation.
+</p>
+
+<pre>
+numbers = (10, 20, 30)
+
+print(numbers)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn10"
+onclick="completeLesson(10)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 11 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 11
+</span>
+
+<h2>Sets</h2>
+
+<p>
+Sets store unique values.
+</p>
+
+<pre>
+numbers = {1, 2, 3, 3}
+
+print(numbers)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn11"
+onclick="completeLesson(11)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 12 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 12
+</span>
+
+<h2>Dictionaries</h2>
+
+<p>
+Dictionaries store data using key-value pairs.
+</p>
+
+<pre>
+student = {
+    "name": "Student",
+    "age": 18
+}
+
+print(student["name"])
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn12"
+onclick="completeLesson(12)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 13 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 13
+</span>
+
+<h2>if / elif / else</h2>
+
+<p>
+Conditional statements allow programs to make
+decisions.
+</p>
+
+<pre>
+age = 18
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn13"
+onclick="completeLesson(13)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 14 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 14
+</span>
+
+<h2>for Loop</h2>
+
+<p>
+A for loop is useful for repeating code over a sequence.
+</p>
+
+<pre>
 for i in range(5):
     print(i)
-      </pre>
+</pre>
 
-      <button id="lessonBtn4" onclick="completeLesson(4)">
-        Complete Lesson
-      </button>
+<button class="complete-btn"
+id="lessonBtn14"
+onclick="completeLesson(14)">
+Complete Lesson
+</button>
 
-    </div>
+</div>
 
 
-    <!-- Lesson 5 -->
+<!-- LESSON 15 -->
 
-    <div class="lesson">
+<div class="lesson">
 
-      <h3>Lesson 5: Functions</h3>
+<span class="lesson-number">
+LESSON 15
+</span>
 
-      <p>
-        Functions allow us to create reusable blocks of code.
-      </p>
+<h2>while Loop</h2>
 
-      <pre>
+<p>
+A while loop repeats code while a condition remains true.
+</p>
+
+<pre>
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn15"
+onclick="completeLesson(15)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 16 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 16
+</span>
+
+<h2>break, continue & pass</h2>
+
+<p>
+Learn control statements used inside loops.
+</p>
+
+<pre>
+for i in range(10):
+
+    if i == 5:
+        break
+
+    print(i)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn16"
+onclick="completeLesson(16)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 17 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 17
+</span>
+
+<h2>Functions</h2>
+
+<p>
+Functions are reusable blocks of code.
+</p>
+
+<pre>
 def greet():
     print("Hello Student")
 
 greet()
-      </pre>
+</pre>
 
-      <button id="lessonBtn5" onclick="completeLesson(5)">
-        Complete Lesson
-      </button>
+<button class="complete-btn"
+id="lessonBtn17"
+onclick="completeLesson(17)">
+Complete Lesson
+</button>
 
-    </div>
-
-
-    <!-- Quiz -->
-
-    <div class="quiz">
-
-      <h2>🧠 Python Mini Quiz</h2>
+</div>
 
 
-      <div class="question">
+<!-- LESSON 18 -->
 
-        <p><strong>1. Which function is used to display output?</strong></p>
+<div class="lesson">
 
-        <label>
-          <input type="radio" name="q1" value="a">
-          print()
-        </label>
+<span class="lesson-number">
+LESSON 18
+</span>
 
-        <label>
-          <input type="radio" name="q1" value="b">
-          output()
-        </label>
+<h2>Function Arguments</h2>
 
-        <label>
-          <input type="radio" name="q1" value="c">
-          display()
-        </label>
+<p>
+Arguments allow us to send data to functions.
+</p>
 
-      </div>
+<pre>
+def greet(name):
+    print("Hello", name)
 
+greet("Student")
+</pre>
 
-      <div class="question">
+<button class="complete-btn"
+id="lessonBtn18"
+onclick="completeLesson(18)">
+Complete Lesson
+</button>
 
-        <p><strong>2. Which symbol is used for assignment?</strong></p>
-
-        <label>
-          <input type="radio" name="q2" value="a">
-          ==
-        </label>
-
-        <label>
-          <input type="radio" name="q2" value="b">
-          =
-        </label>
-
-        <label>
-          <input type="radio" name="q2" value="c">
-          !=
-        </label>
-
-      </div>
+</div>
 
 
-      <div class="question">
+<!-- LESSON 19 -->
 
-        <p><strong>3. Which keyword is used to create a function?</strong></p>
+<div class="lesson">
 
-        <label>
-          <input type="radio" name="q3" value="a">
-          function
-        </label>
+<span class="lesson-number">
+LESSON 19
+</span>
 
-        <label>
-          <input type="radio" name="q3" value="b">
-          fun
-        </label>
+<h2>Return Statement</h2>
 
-        <label>
-          <input type="radio" name="q3" value="c">
-          def
-        </label>
+<p>
+The return statement sends a value back from a function.
+</p>
 
-      </div>
+<pre>
+def add(a, b):
+    return a + b
 
+result = add(5, 3)
 
-      <button onclick="checkQuiz()">
-        Submit Quiz
-      </button>
+print(result)
+</pre>
 
-      <div id="result"></div>
+<button class="complete-btn"
+id="lessonBtn19"
+onclick="completeLesson(19)">
+Complete Lesson
+</button>
 
-      <button class="reset-btn" onclick="resetProgress()">
-        Reset Progress
-      </button>
-
-    </div>
-
-  </div>
+</div>
 
 
-  <footer>
+<!-- LESSON 20 -->
 
-    <p>© 2026 B.Voc Software Development Learning Platform</p>
+<div class="lesson">
 
-  </footer>
+<span class="lesson-number">
+LESSON 20
+</span>
+
+<h2>Scope of Variables</h2>
+
+<p>
+Learn the difference between local and global variables.
+</p>
+
+<pre>
+x = 10
+
+def show():
+    y = 20
+    print(x)
+    print(y)
+
+show()
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn20"
+onclick="completeLesson(20)">
+Complete Lesson
+</button>
+
+</div>
 
 
-  <script>
+<!-- LESSON 21 -->
 
-    // Load saved progress
+<div class="lesson">
 
-    let completedLessons =
-      JSON.parse(localStorage.getItem("pythonLessons")) || [];
+<span class="lesson-number">
+LESSON 21
+</span>
+
+<h2>Modules & Packages</h2>
+
+<p>
+Modules help organize Python programs and reuse code.
+</p>
+
+<pre>
+import math
+
+print(math.sqrt(25))
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn21"
+onclick="completeLesson(21)">
+Complete Lesson
+</button>
+
+</div>
 
 
-    function updateProgress() {
+<!-- LESSON 22 -->
 
-      const totalLessons = 5;
+<div class="lesson">
 
-      const completed = completedLessons.length;
+<span class="lesson-number">
+LESSON 22
+</span>
 
-      const progress =
-        Math.round((completed / totalLessons) * 100);
+<h2>File Handling</h2>
 
-      document.getElementById("progressText").innerText =
-        progress + "%";
+<p>
+Learn how to read and write files using Python.
+</p>
 
-      document.getElementById("progressFill").style.width =
-        progress + "%";
+<pre>
+file = open("data.txt", "w")
+
+file.write("Hello Python")
+
+file.close()
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn22"
+onclick="completeLesson(22)">
+Complete Lesson
+</button>
+
+</div>
 
 
-      // Update buttons
+<!-- LESSON 23 -->
 
-      for (let i = 1; i <= totalLessons; i++) {
+<div class="lesson">
 
-        const button =
-          document.getElementById("lessonBtn" + i);
+<span class="lesson-number">
+LESSON 23
+</span>
 
-        if (completedLessons.includes(i)) {
+<h2>Exception Handling</h2>
 
-          button.innerText = "✅ Completed";
+<p>
+Exception handling prevents programs from stopping
+unexpectedly when an error occurs.
+</p>
 
-          button.classList.add("completed");
+<pre>
+try:
+    number = int(input("Enter number: "))
+    print(number)
+except ValueError:
+    print("Invalid input")
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn23"
+onclick="completeLesson(23)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 24 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 24
+</span>
+
+<h2>Object-Oriented Programming</h2>
+
+<p>
+Learn the basic concepts of object-oriented programming.
+</p>
+
+<ul>
+<li>Class</li>
+<li>Object</li>
+<li>Methods</li>
+</ul>
+
+<pre>
+class Student:
+
+    def greet(self):
+        print("Hello Student")
+
+student = Student()
+
+student.greet()
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn24"
+onclick="completeLesson(24)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 25 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 25
+</span>
+
+<h2>Classes & Objects</h2>
+
+<p>
+Classes define the structure of objects.
+</p>
+
+<pre>
+class Car:
+
+    def __init__(self, name):
+        self.name = name
+
+car = Car("Python Car")
+
+print(car.name)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn25"
+onclick="completeLesson(25)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 26 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 26
+</span>
+
+<h2>Inheritance</h2>
+
+<p>
+Inheritance allows one class to use features of another
+class.
+</p>
+
+<pre>
+class Animal:
+
+    def speak(self):
+        print("Animal sound")
+
+
+class Dog(Animal):
+
+    pass
+
+
+dog = Dog()
+
+dog.speak()
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn26"
+onclick="completeLesson(26)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 27 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 27
+</span>
+
+<h2>Encapsulation & Polymorphism</h2>
+
+<p>
+Learn important object-oriented programming concepts
+used in larger applications.
+</p>
+
+<pre>
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+student = Student("Alex")
+
+print(student.name)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn27"
+onclick="completeLesson(27)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 28 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 28
+</span>
+
+<h2>Lambda & List Comprehension</h2>
+
+<p>
+Learn concise ways to write Python expressions.
+</p>
+
+<pre>
+square = lambda x: x * x
+
+print(square(5))
+
+
+numbers = [1, 2, 3, 4]
+
+squares = [x*x for x in numbers]
+
+print(squares)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn28"
+onclick="completeLesson(28)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 29 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 29
+</span>
+
+<h2>pip & Virtual Environment</h2>
+
+<p>
+Learn the basics of installing Python packages and
+isolating project dependencies.
+</p>
+
+<pre>
+pip install package-name
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn29"
+onclick="completeLesson(29)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- LESSON 30 -->
+
+<div class="lesson">
+
+<span class="lesson-number">
+LESSON 30
+</span>
+
+<h2>🚀 Python Mini Project</h2>
+
+<p>
+Build a simple student marks program using variables,
+conditions and calculations.
+</p>
+
+<pre>
+name = input("Student name: ")
+
+marks = int(input("Enter marks: "))
+
+if marks >= 40:
+    result = "Pass"
+else:
+    result = "Fail"
+
+print(name)
+print(result)
+</pre>
+
+<button class="complete-btn"
+id="lessonBtn30"
+onclick="completeLesson(30)">
+Complete Lesson
+</button>
+
+</div>
+
+
+<!-- QUIZ -->
+
+<div class="quiz">
+
+<h2>🧠 Python Final Quiz</h2>
+
+
+<div class="question">
+
+<p>
+1. Which keyword creates a function?
+</p>
+
+<label>
+<input type="radio" name="q1" value="a">
+function
+</label>
+
+<label>
+<input type="radio" name="q1" value="b">
+def
+</label>
+
+<label>
+<input type="radio" name="q1" value="c">
+fun
+</label>
+
+</div>
+
+
+<div class="question">
+
+<p>
+2. Which data type stores key-value pairs?
+</p>
+
+<label>
+<input type="radio" name="q2" value="a">
+List
+</label>
+
+<label>
+<input type="radio" name="q2" value="b">
+Tuple
+</label>
+
+<label>
+<input type="radio" name="q2" value="c">
+Dictionary
+</label>
+
+</div>
+
+
+<div class="question">
+
+<p>
+3. Which loop is commonly used to iterate over a sequence?
+</p>
+
+<label>
+<input type="radio" name="q3" value="a">
+for
+</label>
+
+<label>
+<input type="radio" name="q3" value="b">
+switch
+</label>
+
+<label>
+<input type="radio" name="q3" value="c">
+goto
+</label>
+
+</div>
+
+
+<button onclick="checkQuiz()">
+Submit Quiz
+</button>
+
+<div id="result"></div>
+
+
+<button class="reset" onclick="resetProgress()">
+Reset Progress
+</button>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<h2>B.Voc SD</h2>
+
+<p>
+Programming & Machine Learning Learning Platform
+</p>
+
+<p>
+© 2026 B.Voc SD
+</p>
+
+</footer>
+
+
+<script>
+
+
+/* =========================
+   LESSON PROGRESS
+========================= */
+
+const totalLessons = 30;
+
+let completedLessons =
+JSON.parse(
+localStorage.getItem("pythonLessons")
+) || [];
+
+
+function updateProgress(){
+
+    let completed =
+    completedLessons.length;
+
+    let progress =
+    Math.round(
+    (completed / totalLessons) * 100
+    );
+
+    document.getElementById(
+    "progressText"
+    ).innerText =
+    progress + "%";
+
+    document.getElementById(
+    "progressFill"
+    ).style.width =
+    progress + "%";
+
+
+    for(
+        let i = 1;
+        i <= totalLessons;
+        i++
+    ){
+
+        let button =
+        document.getElementById(
+        "lessonBtn" + i
+        );
+
+        if(
+        completedLessons.includes(i)
+        ){
+
+            button.innerText =
+            "✅ Completed";
+
+            button.classList.add(
+            "completed"
+            );
 
         }
 
-      }
-
     }
 
+}
 
-    function completeLesson(number) {
 
-      if (!completedLessons.includes(number)) {
+function completeLesson(number){
+
+    if(
+    !completedLessons.includes(number)
+    ){
 
         completedLessons.push(number);
 
         localStorage.setItem(
-          "pythonLessons",
-          JSON.stringify(completedLessons)
+        "pythonLessons",
+        JSON.stringify(
+        completedLessons
+        )
         );
 
         updateProgress();
 
         alert(
-          "🎉 Lesson " +
-          number +
-          " completed!"
+        "🎉 Lesson " +
+        number +
+        " completed!"
         );
 
-      } else {
+    }else{
 
-        alert("✅ You already completed this lesson.");
-
-      }
+        alert(
+        "✅ This lesson is already completed."
+        );
 
     }
 
-
-    // Quiz
-
-    function checkQuiz() {
-
-      let score = 0;
+}
 
 
-      const q1 =
-        document.querySelector('input[name="q1"]:checked');
+/* =========================
+   QUIZ
+========================= */
 
-      const q2 =
-        document.querySelector('input[name="q2"]:checked');
+function checkQuiz(){
 
-      const q3 =
-        document.querySelector('input[name="q3"]:checked');
+    let score = 0;
+
+    let q1 =
+    document.querySelector(
+    'input[name="q1"]:checked'
+    );
+
+    let q2 =
+    document.querySelector(
+    'input[name="q2"]:checked'
+    );
+
+    let q3 =
+    document.querySelector(
+    'input[name="q3"]:checked'
+    );
 
 
-      if (!q1 || !q2 || !q3) {
+    if(!q1 || !q2 || !q3){
 
-        document.getElementById("result").innerText =
-          "⚠️ Please answer all questions.";
+        document.getElementById(
+        "result"
+        ).innerText =
+        "⚠️ Please answer all questions.";
 
         return;
 
-      }
-
-
-      if (q1.value === "a") score++;
-
-      if (q2.value === "b") score++;
-
-      if (q3.value === "c") score++;
-
-
-      document.getElementById("result").innerText =
-        "🏆 Your Score: " + score + " / 3";
-
     }
 
 
-    // Reset progress
+    if(q1.value === "b"){
+        score++;
+    }
 
-    function resetProgress() {
+    if(q2.value === "c"){
+        score++;
+    }
 
-      const confirmReset =
-        confirm("Are you sure you want to reset Python progress?");
+    if(q3.value === "a"){
+        score++;
+    }
 
-      if (confirmReset) {
 
-        localStorage.removeItem("pythonLessons");
+    document.getElementById(
+    "result"
+    ).innerText =
+    "🏆 Your Score: " +
+    score +
+    " / 3";
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+function resetProgress(){
+
+    let confirmReset =
+    confirm(
+    "Are you sure you want to reset Python progress?"
+    );
+
+    if(confirmReset){
+
+        localStorage.removeItem(
+        "pythonLessons"
+        );
 
         completedLessons = [];
 
         location.reload();
 
-      }
-
     }
 
+}
 
-    // Run when page loads
 
-    updateProgress();
+/* LOAD PROGRESS */
 
-  </script>
+updateProgress();
+
+</script>
+
 
 </body>
 
