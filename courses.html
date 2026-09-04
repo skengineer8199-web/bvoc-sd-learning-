@@ -634,16 +634,22 @@ Programming & Machine Learning Learning Platform
 
 <script>
 
-
 function startCourse(course){
 
-alert(
-"📚 " +
-course +
-" selected!\n\n" +
-"Full lessons, videos, quizzes and " +
-"progress tracking will be added next."
-);
+    if(course === "Python"){
+
+        window.location.href = "python.html";
+
+        return;
+    }
+
+    alert(
+        "📚 " +
+        course +
+        " selected!\n\n" +
+        "Full lessons, videos, quizzes and " +
+        "progress tracking will be added next."
+    );
 
 }
 
@@ -656,36 +662,34 @@ document
 "input",
 function(){
 
-let searchText =
-this.value.toLowerCase();
+    let searchText =
+    this.value.toLowerCase();
 
-document
-.querySelectorAll(".course")
-.forEach(
-function(card){
+    document
+    .querySelectorAll(".course")
+    .forEach(
+    function(card){
 
-let text =
-card.innerText.toLowerCase();
+        let text =
+        card.innerText.toLowerCase();
 
-if(
-text.includes(searchText)
-){
+        if(
+        text.includes(searchText)
+        ){
 
-card.style.display =
-"block";
+            card.style.display =
+            "block";
 
-}else{
+        }else{
 
-card.style.display =
-"none";
+            card.style.display =
+            "none";
 
-}
+        }
+
+    });
 
 });
-
-});
-
-
 </script>
 
 
