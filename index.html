@@ -1,10 +1,7 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>B.Voc Software Development</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>B.Voc SD - Software Development</title><style>
 
 /* =========================
-   GENERAL
+   BASIC
 ========================= */
 
 * {
@@ -43,14 +40,15 @@ header {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -62,6 +60,9 @@ nav a:hover {
   color: #60a5fa;
 }
 
+
+/* DARK MODE BUTTON */
+
 #themeBtn {
   background: #374151;
   color: white;
@@ -70,6 +71,7 @@ nav a:hover {
   border-radius: 8px;
   cursor: pointer;
   font-size: 18px;
+  margin-left: 5px;
 }
 
 #themeBtn:hover {
@@ -83,7 +85,8 @@ nav a:hover {
 
 .hero {
   text-align: center;
-  padding: 80px 20px;
+
+  padding: 90px 20px;
 
   background: linear-gradient(
     135deg,
@@ -100,10 +103,11 @@ nav a:hover {
 }
 
 .hero p {
-  font-size: 19px;
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
-  line-height: 1.6;
+
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 .hero-buttons {
@@ -111,14 +115,19 @@ nav a:hover {
 }
 
 .btn {
-  display: inline-block;
+  border: none;
+
   background: white;
   color: #2563eb;
-  padding: 13px 24px;
+
+  padding: 13px 25px;
+
   border-radius: 8px;
+
   margin: 5px;
+
   font-weight: bold;
-  border: none;
+
   cursor: pointer;
 }
 
@@ -137,7 +146,9 @@ section {
 
 .section-title {
   text-align: center;
+
   font-size: 32px;
+
   margin-bottom: 35px;
 }
 
@@ -152,22 +163,32 @@ section {
 }
 
 .dashboard-grid {
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns:
+  repeat(4, 1fr);
+
   gap: 20px;
 }
 
 .dashboard-card {
+
   background: white;
+
   padding: 25px;
+
   border-radius: 15px;
+
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+  box-shadow:
+  0 5px 20px rgba(0,0,0,0.08);
 }
 
 .dashboard-card h3 {
-  margin: 0;
   font-size: 30px;
+  margin: 0;
 }
 
 .dashboard-card p {
@@ -176,25 +197,33 @@ section {
 
 
 /* =========================
-   COURSES
+   PROGRAMMING COURSES
 ========================= */
 
 .course-grid {
+
   max-width: 1100px;
+
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+  repeat(3, 1fr);
 
   gap: 20px;
 }
 
 .card {
+
   background: white;
+
   padding: 25px;
+
   border-radius: 15px;
 
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:
+  0 5px 20px rgba(0,0,0,0.08);
 
   transition: 0.3s;
 }
@@ -213,12 +242,16 @@ section {
 
 .card p {
   color: #6b7280;
+
   line-height: 1.6;
 }
 
 .card button {
+
   background: #2563eb;
+
   color: white;
+
   border: none;
 
   padding: 10px 18px;
@@ -240,21 +273,29 @@ section {
 }
 
 .ml-grid {
+
   max-width: 1100px;
+
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+  repeat(3, 1fr);
 
   gap: 20px;
 }
 
 .ml-card {
+
   background: white;
+
   padding: 25px;
+
   border-radius: 15px;
 
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:
+  0 5px 20px rgba(0,0,0,0.08);
 }
 
 .ml-card h3 {
@@ -262,7 +303,9 @@ section {
 }
 
 .ml-card p {
+
   color: #6b7280;
+
   line-height: 1.6;
 }
 
@@ -272,39 +315,54 @@ section {
 ========================= */
 
 .career-section {
+
   padding: 70px 20px;
+
   text-align: center;
 }
 
 .career-section h2 {
+
   font-size: 34px;
+
   margin-bottom: 12px;
 }
 
 .section-subtitle {
+
   max-width: 750px;
+
   margin: 0 auto 40px;
+
   color: #6b7280;
+
   line-height: 1.6;
 }
 
 .career-grid {
+
   max-width: 1200px;
+
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+  repeat(3, 1fr);
 
   gap: 24px;
 }
 
 .career-card {
+
   background: white;
+
   padding: 28px;
 
   border-radius: 18px;
 
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:
+  0 5px 20px rgba(0,0,0,0.08);
 
   text-align: left;
 
@@ -312,36 +370,50 @@ section {
 }
 
 .career-card:hover {
-  transform: translateY(-6px);
+
+  transform:
+  translateY(-6px);
 }
 
 .career-icon {
+
   font-size: 42px;
+
   margin-bottom: 12px;
 }
 
 .career-card h3 {
+
   font-size: 21px;
+
   margin-bottom: 10px;
 }
 
 .career-card p {
+
   color: #6b7280;
+
   line-height: 1.6;
 }
 
 .career-card h4 {
+
   margin-top: 20px;
+
   margin-bottom: 10px;
 }
 
 .career-card ul {
+
   padding-left: 20px;
+
   margin: 0;
 }
 
 .career-card li {
+
   margin-bottom: 7px;
+
   color: #4b5563;
 }
 
@@ -351,21 +423,29 @@ section {
 ========================= */
 
 .contact {
+
   text-align: center;
+
   background: #111827;
+
   color: white;
 }
 
 .contact p {
+
   color: #d1d5db;
+
+  line-height: 1.6;
 }
 
 .contact-btn {
+
   display: inline-block;
 
   margin-top: 15px;
 
   background: #2563eb;
+
   color: white;
 
   padding: 12px 25px;
@@ -379,7 +459,9 @@ section {
 ========================= */
 
 footer {
+
   background: #030712;
+
   color: #9ca3af;
 
   text-align: center;
@@ -393,56 +475,89 @@ footer {
 ========================= */
 
 body.dark-mode {
+
   background: #111827;
+
   color: #f9fafb;
 }
 
-body.dark-mode .dashboard-card,
-body.dark-mode .card,
-body.dark-mode .ml-card,
-body.dark-mode .career-card {
+body.dark-mode
+.dashboard-card,
+
+body.dark-mode
+.card,
+
+body.dark-mode
+.ml-card,
+
+body.dark-mode
+.career-card {
+
   background: #1f2937;
+
   color: #f9fafb;
 }
 
-body.dark-mode .dashboard-card p,
-body.dark-mode .card p,
-body.dark-mode .ml-card p,
-body.dark-mode .career-card p,
-body.dark-mode .career-card li,
-body.dark-mode .section-subtitle {
+body.dark-mode
+.dashboard-card p,
+
+body.dark-mode
+.card p,
+
+body.dark-mode
+.ml-card p,
+
+body.dark-mode
+.career-card p,
+
+body.dark-mode
+.career-card li,
+
+body.dark-mode
+.section-subtitle {
+
   color: #d1d5db;
 }
 
-body.dark-mode .ml-section {
+body.dark-mode
+.ml-section {
+
   background: #111827;
 }
 
 
 /* =========================
-   MOBILE
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 900px) {
 
   header {
+
     flex-direction: column;
+
     gap: 15px;
   }
 
   nav {
-    flex-wrap: wrap;
+
     justify-content: center;
   }
 
   .dashboard-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+    repeat(2, 1fr);
   }
 
   .course-grid,
+
   .ml-grid,
+
   .career-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+    repeat(2, 1fr);
   }
 
 }
@@ -451,21 +566,28 @@ body.dark-mode .ml-section {
 @media (max-width: 600px) {
 
   .hero h1 {
+
     font-size: 32px;
   }
 
   .hero p {
+
     font-size: 16px;
   }
 
   .dashboard-grid,
+
   .course-grid,
+
   .ml-grid,
+
   .career-grid {
+
     grid-template-columns: 1fr;
   }
 
   .career-section h2 {
+
     font-size: 27px;
   }
 
@@ -475,11 +597,11 @@ body.dark-mode .ml-section {
      HEADER
 ========================= --><header><div class="logo">
   B.Voc SD
-</div><nav><a href="index.html">Home</a>
-
-<a href="courses.html">Courses</a>
-
-<a href="machine-learning.html">
+</div><nav><a href="index.html">
+  Home
+</a><a href="courses.html">
+  Courses
+</a><a href="machine-learning.html">
   Machine Learning
 </a><a href="practice.html">
   Practice
@@ -487,80 +609,166 @@ body.dark-mode .ml-section {
   Dashboard
 </a><a href="#contact">
   Contact
-</a><button onclick="toggleDarkMode()" id="themeBtn">
-  🌙
-</button></nav></header><!-- =========================
+</a><button
+onclick="toggleDarkMode()"
+id="themeBtn">
+🌙
+</button>
+
+</nav></header><!-- =========================
      HERO
 ========================= --><section class="hero"><h1>
   Learn Programming & Machine Learning
-</h1><p>
-  Welcome to B.Voc Software Development Learning Platform.
-  Learn programming, web development, databases, DSA,
-  machine learning and build real projects.
-</p><div class="hero-buttons"><button class="btn" onclick="goCourses()">
-  🚀 Start Learning
-</button><button class="btn" onclick="welcome()">
-  👋 Explore Platform
+</h1><p>Welcome to B.Voc Software Development
+Learning Platform.
+
+Learn programming, web development,
+databases, DSA, machine learning
+and build real-world projects.
+
+</p><div class="hero-buttons"><button
+class="btn"
+onclick="goCourses()">
+
+🚀 Start Learning
+
+</button><button
+class="btn"
+onclick="welcome()">
+
+👋 Explore Platform
+
 </button></div></section><!-- =========================
-     STUDENT DASHBOARD
+     LEARNING DASHBOARD
 ========================= --><section><h2 class="section-title">
   📊 Learning Overview
-</h2><div class="dashboard"><div class="dashboard-grid"><div class="dashboard-card"><h3>68%</h3><p>Overall Progress</p></div><div class="dashboard-card"><h3>12</h3><p>Courses</p></div><div class="dashboard-card"><h3>47</h3><p>Lessons</p></div><div class="dashboard-card"><h3>8</h3><p>Projects</p></div></div></div></section><!-- =========================
+</h2><div class="dashboard"><div class="dashboard-grid"><div class="dashboard-card"><h3>
+  68%
+</h3><p>
+  Overall Progress
+</p></div><div class="dashboard-card"><h3>
+  12
+</h3><p>
+  Courses
+</p></div><div class="dashboard-card"><h3>
+  47
+</h3><p>
+  Lessons
+</p></div><div class="dashboard-card"><h3>
+  8
+</h3><p>
+  Projects
+</p></div></div></div></section><!-- =========================
      PROGRAMMING COURSES
 ========================= --><section><h2 class="section-title">
   💻 Programming Courses
-</h2><div class="course-grid"><div class="card"><div class="card-icon">🐍</div><h3>Python</h3><p>
-Learn Python from basics to advanced concepts
-and build practical projects.
-</p><button onclick="course('Python')">
-  Start Learning
-</button></div><div class="card"><div class="card-icon">⚡</div><h3>C / C++</h3><p>
-Learn programming fundamentals, pointers,
-OOP and problem solving.
-</p><button onclick="course('C/C++')">
-  Start Learning
-</button></div><div class="card"><div class="card-icon">☕</div><h3>Java</h3><p>
-Learn Java programming, OOP,
+</h2><div class="course-grid"><div class="card"><div class="card-icon">
+  🐍
+</div><h3>
+  Python
+</h3><p>Learn Python from basics to advanced
+concepts and build practical projects.
+
+</p><button
+onclick="course('Python')">
+
+Start Learning
+
+</button></div><div class="card"><div class="card-icon">
+  ⚡
+</div><h3>
+  C / C++
+</h3><p>Learn programming fundamentals,
+pointers, OOP and problem solving.
+
+</p><button
+onclick="course('C/C++')">
+
+Start Learning
+
+</button></div><div class="card"><div class="card-icon">
+  ☕
+</div><h3>
+  Java
+</h3><p>Learn Java programming, OOP,
 collections and application development.
-</p><button onclick="course('Java')">
-  Start Learning
-</button></div><div class="card"><div class="card-icon">🌐</div><h3>Web Development</h3><p>
-Learn HTML, CSS and JavaScript
+
+</p><button
+onclick="course('Java')">
+
+Start Learning
+
+</button></div><div class="card"><div class="card-icon">
+  🌐
+</div><h3>
+  Web Development
+</h3><p>Learn HTML, CSS and JavaScript
 to build modern websites.
-</p><button onclick="course('Web Development')">
-  Start Learning
-</button></div><div class="card"><div class="card-icon">🗄️</div><h3>SQL & Database</h3><p>
-Learn databases, SQL queries,
+
+</p><button
+onclick="course('Web Development')">
+
+Start Learning
+
+</button></div><div class="card"><div class="card-icon">
+  🗄️
+</div><h3>
+  SQL & Database
+</h3><p>Learn databases, SQL queries,
 tables, joins and database concepts.
-</p><button onclick="course('SQL')">
-  Start Learning
-</button></div><div class="card"><div class="card-icon">🧠</div><h3>Data Structures & Algorithms</h3><p>
-Improve problem-solving skills with
-arrays, stacks, queues, trees and algorithms.
-</p><button onclick="course('DSA')">
-  Start Learning
+
+</p><button
+onclick="course('SQL')">
+
+Start Learning
+
+</button></div><div class="card"><div class="card-icon">
+  🧠
+</div><h3>
+  Data Structures & Algorithms
+</h3><p>Improve problem-solving skills with
+arrays, stacks, queues, trees
+and algorithms.
+
+</p><button
+onclick="course('DSA')">
+
+Start Learning
+
 </button></div></div></section><!-- =========================
      MACHINE LEARNING
 ========================= --><section class="ml-section"><h2 class="section-title">
   🤖 Machine Learning
-</h2><div class="ml-grid"><div class="ml-card"><h3>🐍 Python for ML</h3><p>
-Learn Python libraries and programming concepts
-required for machine learning.
-</p></div><div class="ml-card"><h3>📈 Supervised Learning</h3><p>
-Learn regression, classification and
-model evaluation concepts.
-</p></div><div class="ml-card"><h3>🔍 Unsupervised Learning</h3><p>
-Learn clustering and methods for
-finding patterns in data.
-</p></div><div class="ml-card"><h3>🧠 Neural Networks</h3><p>
-Understand the fundamentals of neural
-networks and deep learning.
-</p></div><div class="ml-card"><h3>📊 Data Analysis</h3><p>
-Work with datasets using Python,
+</h2><div class="ml-grid"><div class="ml-card"><h3>
+  🐍 Python for ML
+</h3><p>Learn Python libraries and programming
+concepts required for machine learning.
+
+</p></div><div class="ml-card"><h3>
+  📈 Supervised Learning
+</h3><p>Learn regression, classification
+and model evaluation concepts.
+
+</p></div><div class="ml-card"><h3>
+  🔍 Unsupervised Learning
+</h3><p>Learn clustering and methods
+for finding patterns in data.
+
+</p></div><div class="ml-card"><h3>
+  🧠 Neural Networks
+</h3><p>Understand the fundamentals
+of neural networks and deep learning.
+
+</p></div><div class="ml-card"><h3>
+  📊 Data Analysis
+</h3><p>Work with datasets using Python,
 Pandas and visualization tools.
-</p></div><div class="ml-card"><h3>🚀 ML Projects</h3><p>
-Build practical machine learning projects
-and strengthen your portfolio.
+
+</p></div><div class="ml-card"><h3>
+  🚀 ML Projects
+</h3><p>Build practical machine learning
+projects and strengthen your portfolio.
+
 </p></div></div></section><!-- =========================
      CAREER OPPORTUNITIES
 ========================= --><section class="career-section"><h2>
@@ -569,133 +777,189 @@ and strengthen your portfolio.
 different career paths in software development,
 web, data and machine learning.
 
-</p><div class="career-grid"><!-- Software Developer --><div class="career-card"><div class="career-icon">💻</div><h3>
+</p><div class="career-grid"><!-- 1 --><div class="career-card"><div class="career-icon">
+  💻
+</div><h3>
   Software Developer
-</h3><p>
-Build software applications, tools and systems
-using programming and problem-solving skills.
-</p><h4>🛠️ Skills</h4><ul><li>Python / Java / C++</li>
+</h3><p>Build software applications, tools
+and systems using programming
+and problem-solving skills.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Python / Java / C++</li>
 <li>Object-Oriented Programming</li>
 <li>Data Structures & Algorithms</li>
 <li>Git & GitHub</li>
 <li>Debugging</li>
 <li>Problem Solving</li>
-<li>Database Fundamentals</li></ul></div><!-- Web Developer --><div class="career-card"><div class="career-icon">🌐</div><h3>
+<li>Database Fundamentals</li></ul></div><!-- 2 --><div class="career-card"><div class="career-icon">
+  🌐
+</div><h3>
   Web Developer
-</h3><p>
-Create responsive websites and interactive
-web applications.
-</p><h4>🛠️ Skills</h4><ul><li>HTML</li>
+</h3><p>Create responsive websites
+and interactive web applications.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>HTML</li>
 <li>CSS</li>
 <li>JavaScript</li>
 <li>Responsive Design</li>
 <li>DOM & Events</li>
 <li>APIs</li>
-<li>Git & GitHub</li></ul></div><!-- Frontend --><div class="career-card"><div class="career-icon">🎨</div><h3>
+<li>Git & GitHub</li></ul></div><!-- 3 --><div class="career-card"><div class="career-icon">
+  🎨
+</div><h3>
   Frontend Developer
-</h3><p>
-Build the user interface and interactive
-experience of modern websites.
-</p><h4>🛠️ Skills</h4><ul><li>HTML5</li>
+</h3><p>Build user interfaces and
+interactive experiences for websites.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>HTML5</li>
 <li>CSS3</li>
 <li>JavaScript</li>
 <li>Responsive UI</li>
 <li>DOM Manipulation</li>
 <li>API Integration</li>
-<li>React Basics</li></ul></div><!-- Backend --><div class="career-card"><div class="career-icon">⚙️</div><h3>
+<li>React Basics</li></ul></div><!-- 4 --><div class="career-card"><div class="career-icon">
+  ⚙️
+</div><h3>
   Backend Developer
-</h3><p>
-Build server-side applications, APIs,
-databases and application logic.
-</p><h4>🛠️ Skills</h4><ul><li>Python / Java / Node.js</li>
+</h3><p>Build server-side applications,
+APIs, databases and application logic.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Python / Java / Node.js</li>
 <li>REST APIs</li>
 <li>SQL</li>
 <li>Database Design</li>
 <li>Authentication Basics</li>
 <li>Server-side Programming</li>
-<li>Git & GitHub</li></ul></div><!-- Full Stack --><div class="career-card"><div class="career-icon">🚀</div><h3>
+<li>Git & GitHub</li></ul></div><!-- 5 --><div class="career-card"><div class="career-icon">
+  🚀
+</div><h3>
   Full Stack Developer
-</h3><p>
-Work across frontend, backend, databases
-and APIs to build complete applications.
-</p><h4>🛠️ Skills</h4><ul><li>HTML, CSS & JavaScript</li>
+</h3><p>Work across frontend, backend,
+databases and APIs to build
+complete applications.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>HTML, CSS & JavaScript</li>
 <li>Frontend Frameworks</li>
 <li>Backend Programming</li>
 <li>REST APIs</li>
 <li>SQL & Databases</li>
 <li>Git & GitHub</li>
-<li>Deployment Basics</li></ul></div><!-- ML Engineer --><div class="career-card"><div class="career-icon">🤖</div><h3>
+<li>Deployment Basics</li></ul></div><!-- 6 --><div class="career-card"><div class="career-icon">
+  🤖
+</div><h3>
   Machine Learning Engineer
-</h3><p>
-Build machine learning models that learn
-from data and make predictions.
-</p><h4>🛠️ Skills</h4><ul><li>Python</li>
+</h3><p>Build machine learning models
+that learn from data and
+make predictions.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Python</li>
 <li>NumPy</li>
 <li>Pandas</li>
 <li>Matplotlib</li>
 <li>Machine Learning Algorithms</li>
 <li>Model Evaluation</li>
-<li>Scikit-learn</li></ul></div><!-- Data Analyst --><div class="career-card"><div class="career-icon">📊</div><h3>
+<li>Scikit-learn</li></ul></div><!-- 7 --><div class="career-card"><div class="career-icon">
+  📊
+</div><h3>
   Data Analyst
-</h3><p>
-Analyse datasets and turn data into useful
-insights through reports and visualizations.
-</p><h4>🛠️ Skills</h4><ul><li>Python</li>
+</h3><p>Analyse datasets and turn data
+into useful insights through
+reports and visualizations.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Python</li>
 <li>SQL</li>
 <li>Pandas</li>
 <li>Data Cleaning</li>
 <li>Data Visualization</li>
 <li>Statistics Basics</li>
-<li>Excel / Spreadsheet Skills</li></ul></div><!-- AI Developer --><div class="career-card"><div class="career-icon">🧠</div><h3>
+<li>Excel / Spreadsheet Skills</li></ul></div><!-- 8 --><div class="career-card"><div class="career-icon">
+  🧠
+</div><h3>
   AI Developer
-</h3><p>
-Develop intelligent applications using
-machine learning, data processing and AI.
-</p><h4>🛠️ Skills</h4><ul><li>Python</li>
+</h3><p>Develop intelligent applications
+using machine learning,
+data processing and AI concepts.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Python</li>
 <li>Machine Learning</li>
 <li>Neural Networks</li>
 <li>Data Processing</li>
 <li>APIs</li>
 <li>Model Evaluation</li>
-<li>AI Fundamentals</li></ul></div><!-- Database --><div class="career-card"><div class="career-icon">🗄️</div><h3>
+<li>AI Fundamentals</li></ul></div><!-- 9 --><div class="career-card"><div class="career-icon">
+  🗄️
+</div><h3>
   Database Developer
-</h3><p>
-Design, manage and work with databases
-used by software applications.
-</p><h4>🛠️ Skills</h4><ul><li>SQL</li>
+</h3><p>Design, manage and work with
+databases used by applications.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>SQL</li>
 <li>Database Design</li>
 <li>Tables & Relationships</li>
 <li>Joins</li>
 <li>Indexes</li>
 <li>Transactions</li>
-<li>Database Security Basics</li></ul></div><!-- QA --><div class="career-card"><div class="career-icon">🧪</div><h3>
+<li>Database Security Basics</li></ul></div><!-- 10 --><div class="career-card"><div class="career-icon">
+  🧪
+</div><h3>
   QA / Software Tester
-</h3><p>
-Test software applications, identify bugs
-and help improve software quality.
-</p><h4>🛠️ Skills</h4><ul><li>Testing Fundamentals</li>
+</h3><p>Test software applications,
+identify bugs and improve
+software quality.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Testing Fundamentals</li>
 <li>Manual Testing</li>
 <li>Test Cases</li>
 <li>Bug Reporting</li>
 <li>Debugging</li>
 <li>Automation Basics</li>
-<li>Problem Solving</li></ul></div><!-- DevOps --><div class="career-card"><div class="career-icon">☁️</div><h3>
+<li>Problem Solving</li></ul></div><!-- 11 --><div class="career-card"><div class="career-icon">
+  ☁️
+</div><h3>
   DevOps / Cloud
-</h3><p>
-Learn how applications are managed,
-deployed and maintained using modern tools.
-</p><h4>🛠️ Skills</h4><ul><li>Linux Basics</li>
+</h3><p>Learn how applications are
+managed, deployed and maintained
+using modern tools.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Linux Basics</li>
 <li>Git & GitHub</li>
 <li>Command Line</li>
 <li>Networking Basics</li>
 <li>CI/CD Concepts</li>
 <li>Cloud Fundamentals</li>
-<li>Containers Basics</li></ul></div><!-- Freelancer --><div class="career-card"><div class="career-icon">🌟</div><h3>
+<li>Containers Basics</li></ul></div><!-- 12 --><div class="career-card"><div class="career-icon">
+  🌟
+</div><h3>
   Freelance Developer
-</h3><p>
-Use your development skills to create
-websites, applications and software projects.
-</p><h4>🛠️ Skills</h4><ul><li>Programming</li>
+</h3><p>Use your development skills to
+create websites, applications
+and software projects.
+
+</p><h4>
+  🛠️ Skills
+</h4><ul><li>Programming</li>
 <li>Web Development</li>
 <li>Git & GitHub</li>
 <li>Project Management</li>
@@ -703,83 +967,121 @@ websites, applications and software projects.
 <li>Problem Solving</li>
 <li>Portfolio Building</li></ul></div></div></section><!-- =========================
      CONTACT
-========================= --><section class="contact" id="contact"><h2>
+========================= --><section
+  class="contact"
+  id="contact"><h2>
   📩 Start Your Learning Journey
-</h2><p>
-  Learn → Practice → Build Projects → Grow Your Skills
-</p><a href="courses.html" class="contact-btn">
-  Explore Courses
+</h2><p>Learn → Practice → Build Projects → Grow Your Skills
+
+</p><a
+href="courses.html"
+class="contact-btn">
+
+Explore Courses
+
 </a></section><!-- =========================
      FOOTER
-========================= --><footer><p>
-  © 2026 B.Voc Software Development Learning Platform
-</p><p>
-  Learn Programming • Machine Learning • Build Projects
+========================= --><footer><p>© 2026 B.Voc Software Development
+Learning Platform
+
+</p><p>Learn Programming • Machine Learning •
+Build Projects
+
 </p></footer><!-- =========================
      JAVASCRIPT
 ========================= --><script>
 
 
-/* Go To Courses */
+/* =========================
+   GO TO COURSES
+========================= */
 
 function goCourses() {
 
-  window.location.href = "courses.html";
+  window.location.href =
+  "courses.html";
 
 }
 
 
-/* Welcome */
+/* =========================
+   WELCOME
+========================= */
 
 function welcome() {
 
   alert(
+
     "👋 Welcome to B.Voc SD Learning Platform!\n\n" +
+
     "Learn Programming, Web Development, " +
+
     "DSA, Databases and Machine Learning."
+
   );
 
 }
 
 
-/* Course Button */
+/* =========================
+   COURSE BUTTON
+========================= */
 
 function course(name) {
 
   if (name === "Python") {
 
-    window.location.href = "python.html";
+    window.location.href =
+    "python.html";
 
     return;
 
   }
 
+
   alert(
+
     "🚀 " +
     name +
     " course selected!\n\n" +
-    "Detailed lessons and projects are coming soon."
+
+    "Detailed lessons, practice and projects " +
+
+    "will be added soon."
+
   );
 
 }
 
 
-/* Dark Mode */
+/* =========================
+   DARK MODE
+========================= */
 
 function toggleDarkMode() {
 
-  document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle(
+    "dark-mode"
+  );
+
 
   const button =
-    document.getElementById("themeBtn");
+  document.getElementById(
+    "themeBtn"
+  );
+
 
   if (
-    document.body.classList.contains("dark-mode")
+    document.body.classList.contains(
+      "dark-mode"
+    )
   ) {
 
     button.innerText = "☀️";
 
-  } else {
+  }
+
+  else {
 
     button.innerText = "🌙";
 
